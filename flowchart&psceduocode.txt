@@ -1,0 +1,40 @@
+Flowchart:
+
+A flowchart is like a map that shows the steps of a process
+ or a program using shapes and symbols. It helps us understand how things flow from one step to another, making it easier to follow along.
+
+e.g-
+Start
+↓
+Input length and width of the rectangle
+↓
+Calculate area = length × width
+↓
+Output area
+↓
+End
+
+
+
+Pseudocode:
+
+Pseudocode is like writing down the steps of a solution in plain English, without worrying about the exact programming language syntax.
+ It's a way to plan out how to solve a problem before writing actual code.
+
+e.g-
+Start
+
+// Input
+Prompt user for length of the rectangle
+Read length
+
+Prompt user for width of the rectangle
+Read width
+
+// Calculation
+area = length * width
+
+// Output
+Display area
+
+End
