@@ -104,7 +104,7 @@ while(i<=a){
     while(j<=a){
         cout<<i;
         j=j+1;
-    }
+    } 
     cout<<endl;
     i=i+1;
 }
