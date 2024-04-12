@@ -88,3 +88,33 @@ while(i<=a){
 
     return 0;
 }
+
+int a;
+cin>>a;
+int i=1;
+
+while(i<=a){
+    int space=1;
+    while(space<=a-i){
+        cout<<" ";
+        space++;
+        
+    }
+    int j=1;
+
+    int print1=i-1;
+    while(j<=i){
+        cout<<j;
+        j++;
+     ;
+    }
+ int k=1;
+ while(k<=i-1){
+     cout<<print1;
+   
+     k++;
+       print1--;
+ }
+    cout<<endl;
+    i++;
+}
