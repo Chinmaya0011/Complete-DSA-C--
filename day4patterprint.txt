@@ -1,0 +1,90 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+
+// int a;
+// cin>>a;
+
+// int i=0;
+// while(i<=a){
+    
+//     int j=0;
+//     char b='a'+a;//int b=a;(for number)
+//     while(j<=i){
+//         cout<<b;
+//         b--;
+//         j++;
+//     }
+//     cout<<endl;
+//     i++;
+// }
+
+// int a;
+// cin>>a;
+// char b='a';
+// int i=1;
+// while(i<=a){
+//     int j=1;
+//     char c=b;
+//     while(j<=a){
+//         cout<<c;
+//         c++;
+//         j++;
+//     }
+//     cout<<endl;
+//  b++;
+//     i++;
+    
+// }
+
+// int a;
+// cin>>a;
+
+// int i=1;
+// while(i<=a){
+//     int space=a-i;
+//     while(space>=1){
+//      cout<<" ";
+//      space--;
+//     }
+//     int j=1;
+//     while(j<=i){
+//         cout<<"*";
+//         j++;
+//     }
+//     cout<<endl;
+//     i++;
+// }
+
+int a;
+cin>>a;
+
+int i=1;
+while(i<=a){
+    int j=a-i;
+    int space=1;
+    while(space<=i){
+        cout<<" ";
+        space++;
+    }
+    while(j>=1){
+        cout<<"*";
+        j--;
+    }
+    cout<<endl;
+    i++;
+}
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
