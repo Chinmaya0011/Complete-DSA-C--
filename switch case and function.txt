@@ -1,0 +1,150 @@
+// Online C++ compiler to run C++ program online
+// #include <iostream>
+// using namespace std;
+// int main() {
+
+// int num=2;
+// cout<<endl;
+// switch(num){
+//     case 1:
+//     cout<<"first";
+//     break;
+//      case 2:
+//     cout<<"second";
+//     break;
+//   default:
+//     cout<<"zero";
+    
+// }
+// int a,b;
+// cout<<"enter first number"<<endl;
+// cin>>a;
+// cout<<"enter second number"<<endl;
+// cin>>b;
+
+// char op;
+// cout<<"enter a operation to perform";
+// cin>>op;
+
+// switch(op){
+//     case '+':
+//     cout<<a+b<<endl;
+//     break;
+//     case '-':
+//     cout<<a-b<<endl;
+//     break;
+//   case '*':
+//     cout<<a*b<<endl;
+//     break;
+//     case '/':
+//     cout<<a/b<<endl;
+//     break;
+//   default:
+//   cout<<"please enter a valid operation to pr=erform";
+// }
+
+
+//  int a;
+//     cin >> a;
+
+//     int hun, twe, one;
+//     int total = a;
+// int req=0;
+//     switch (req) {
+//         case 0:
+//             hun = total / 100;
+//             total = total - hun * 100;
+        
+//         case 2:
+//             twe = total / 20;
+//             total = total - twe * 20;
+   
+//         case 3:
+//             one = total / 1;
+//             total = total - one * 1;
+       
+//         default:
+//             cout << "Invalid input" << endl;
+//     }
+
+//     cout << hun << " " << twe << " " << one << endl;
+
+
+// int a,b;
+// cin>>a>>b;
+
+// int total=1;
+// for(int i=1;i<=b;i++){
+//     total=total*a;
+// }
+
+// cout<<total;
+
+
+
+
+
+//     return 0;
+// }
+In C++, the `switch` statement is a control flow statement that allows you to efficiently evaluate a variable and execute different blocks of code based on its value. It's particularly useful when you have multiple conditions to check against a single variable.
+
+Here's the basic syntax of a `switch` statement:
+
+```cpp
+switch (expression) {
+    case value1:
+        // code to be executed if expression matches value1
+        break;
+    case value2:
+        // code to be executed if expression matches value2
+        break;
+    // more cases as needed
+    default:
+        // code to be executed if expression doesn't match any case
+}
+```
+
+Here's how it works:
+
+1. The `switch` statement starts by evaluating the expression inside the parentheses `(expression)`.
+
+2. It then compares the result of that expression with each `case` label inside the `switch` block.
+
+3. If a match is found, the code block following that `case` label is executed. The `break;` statement is crucial here; it exits the `switch` block once a match is found, preventing the execution from falling through to the next `case`. Without `break;`, the execution would continue into the next case, which is called "fall-through".
+
+4. If none of the `case` labels match the expression, the `default` block (if present) is executed. This is optional; if omitted and no cases match, the `switch` statement simply does nothing and execution continues with the code after the `switch` block.
+
+Here's an example to illustrate:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 2;
+
+    switch (num) {
+        case 1:
+            cout << "One" << endl;
+            break;
+        case 2:
+            cout << "Two" << endl;
+            break;
+        case 3:
+            cout << "Three" << endl;
+            break;
+        default:
+            cout << "Other" << endl;
+    }
+
+    return 0;
+}
+```
+
+In this example, since `num` is 2, the output would be:
+
+```
+Two
+```
+
+Because the `case 2` label matches the value of `num`.

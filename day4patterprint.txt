@@ -118,3 +118,32 @@ while(i<=a){
     cout<<endl;
     i++;
 }
+
+
+
+int a;
+cin>>a;
+
+int i=0;
+while(i<a){
+    int j=1;
+    
+    while(j<=a-i){
+        cout<<j;
+        j++;
+    }
+  int star=1;
+  while(star<=i*2){
+      cout<<"*";
+      star++;
+  }
+
+
+int k=a-i;
+while(k>=1){
+    cout<<k;
+    k--;
+}
+  cout<<endl;
+    i++;
+}
