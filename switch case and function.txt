@@ -147,4 +147,185 @@ In this example, since `num` is 2, the output would be:
 Two
 ```
 
-Because the `case 2` label matches the value of `num`.
+Because the `case 2` label matches the value of `num`.;
+#include <iostream>
+using namespace std;
+#include <string>
+
+// Define a function named chinmaya that takes two integers (a and b) as parameters
+string chinmaya(int a) {
+    
+    if(a%2==0){
+     return "even";
+     
+    }
+    else{
+       return "odd";
+   
+    }
+}
+
+int main() {
+    // Call the chinmaya function with arguments 12 and 4
+    // The returned value (12 * 4 = 48) is assigned to the variable c
+    string chinu = chinmaya(121);
+cout<<chinu;
+    // Print the value of c
+// cout<<c;
+// if(c==1){
+//     cout<<"number is even";
+// }
+// cout<<"number is odd";
+//     return 0;
+}// 
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+
+int fact(int n){
+    int result=1;
+    for(int i=1;i<=n;i++){
+        result=result*i;
+    }
+    return result;
+}
+
+int ncr(int n,int r){
+   int num1=fact(n);
+   int num2=fact(r)*fact(n-r);
+   int result1=num1/num2;
+   return result1;
+}
+
+
+int main() {
+
+int c=ncr(5,2);
+cout<<c;
+    return 0;
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+
+bool isPrime(int num){
+    bool check=true;
+    for(int i=2;i<num;i++){
+        if(num%i==0){
+            check=false;
+            break;
+        }
+        else{
+            check=true;
+        }
+    }
+    return check;
+}
+int main() {
+int a=isPrime(13);
+if(a){
+    cout<<"it is a prime numuber";
+}
+else{
+    cout<<"it not a prime number";
+}
+
+    return 0;
+}
+Sure! Let's illustrate the concept of the call stack with a simple C++ program:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void bar() {
+    cout << "Inside bar()" << endl;
+}
+
+void foo() {
+    cout << "Inside foo()" << endl;
+    bar(); // Call bar() from foo()
+    cout << "Back in foo()" << endl;
+}
+
+int main() {
+    cout << "Inside main()" << endl;
+    foo(); // Call foo() from main()
+    cout << "Back in main()" << endl;
+    return 0;
+}
+```
+
+When you run this program, it will output:
+
+```
+Inside main()
+Inside foo()
+Inside bar()
+Back in foo()
+Back in main()
+```
+
+Here's what's happening:
+
+- We start from `main()`.
+- Inside `main()`, we call `foo()`.
+- Inside `foo()`, we call `bar()`.
+- `bar()` runs and returns.
+- We're back in `foo()`, so we print "Back in foo()".
+- `foo()` returns, and we're back in `main()`.
+- Finally, `main()` returns, and the program ends.
+
+The call stack keeps track of where we are in the program.
+ When a function is called, its information is pushed onto the stack.
+  When it returns, its information is popped off the stack.
+
+
+
+
+
+
+
+
+
+  It seems like you might be referring to "pass by value" in the context of function parameters in C++. 
+
+In C++, when you pass arguments to a function, they can be passed by value, by reference, or by pointer. Let's focus on "pass by value" here:
+
+**Pass by Value:**
+- When you pass a parameter by value to a function, a copy of the argument's value is made and passed to the function.
+- Any modifications made to the parameter inside the function do not affect the original argument.
+- This is the default way of passing arguments to functions in C++.
+
+Here's an example to illustrate pass by value:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void increment(int x) {
+    x++; // Increment the value of x
+    cout << "Inside function: x = " << x << endl;
+}
+
+int main() {
+    int num = 5;
+    cout << "Before function call: num = " << num << endl;
+    increment(num); // Call the function with num
+    cout << "After function call: num = " << num << endl;
+    return 0;
+}
+```
+
+In this example, `num` is passed by value to the `increment` function. Even though `x` is incremented inside the `increment` function, it does not affect the original `num` variable outside the function. This is because `x` is a copy of `num`.
+
+Output:
+```
+Before function call: num = 5
+Inside function: x = 6
+After function call: num = 5
+```
+
+If you meant something else by "call by pass," please provide more context, and I'll be happy to assist you further!
