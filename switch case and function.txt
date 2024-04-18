@@ -329,3 +329,46 @@ After function call: num = 5
 ```
 
 If you meant something else by "call by pass," please provide more context, and I'll be happy to assist you further!
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int chinmaya(int a){
+    int b=(3*a)+7;
+    return b;
+}
+
+int main() {
+int a;
+cin>>a;
+int c=chinmaya(a);
+cout<<c;
+    return 0;
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int findFibonacci(int n){
+   int first=0;
+   int second=1;
+       int sum;
+
+   for(int i=0;i<=n;i++){
+sum=first+second;
+first=second;
+second=sum;
+  if(i==n-1){
+      cout<<sum<<endl;
+  }
+  cout<<sum<<" ";
+   }
+  return sum;
+}
+
+int main() {
+findFibonacci(5);
+
+
+    return 0;
+}

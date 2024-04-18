@@ -1,0 +1,138 @@
+Sure, let's break it down!
+
+**Array in C++:**
+
+An array in C++ is a data structure that allows you to store multiple elements of the same type under a single name. These elements are stored in contiguous memory locations. Each element in an array is accessed by its index. Arrays in C++ have a fixed size, meaning you must specify the number of elements it can hold at the time of declaration.
+
+Here's a basic syntax for declaring an array in C++:
+
+```cpp
+datatype arrayName[arraySize];
+```
+
+For example, to declare an array of integers with 5 elements:
+
+```cpp
+int numbers[5];
+```
+
+Arrays in C++ are zero-indexed, meaning the first element has an index of 0, the second has an index of 1, and so on.
+
+You can initialize an array at the time of declaration like this:
+
+```cpp
+int numbers[5] = {1, 2, 3, 4, 5};
+```
+
+Or you can initialize individual elements later:
+
+```cpp
+numbers[0] = 10;
+numbers[1] = 20;
+// and so on...
+```
+
+**Array with Functions:**
+
+Arrays can be used as parameters in C++ functions. When you pass an array to a function, you're actually passing a pointer to the first element of the array. Here's a basic example of a function that takes an array as a parameter and prints its elements:
+
+```cpp
+#include <iostream>
+
+// Function to print elements of an array
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; ++i) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5};
+    int size = sizeof(numbers) / sizeof(numbers[0]); // Calculate the size of the array
+
+    // Call the function to print the array
+    printArray(numbers, size);
+
+    return 0;
+}
+```
+
+In this example, `printArray` function takes two parameters: `arr[]`, which is the array to be printed, and `size`, which represents the size of the array. Inside the function, it iterates through the array and prints each element.
+
+When calling `printArray` from `main()`, we pass the `numbers` array and its size as arguments.
+
+This is just a simple example, but you can manipulate arrays in various ways within functions, such as sorting, searching, or modifying their elements.
+#include <iostream>
+using namespace std;
+
+void printArr(int arr[], int sizeOf) {
+    for (int i = 0; i < sizeOf; i++) {
+        cout << arr[i] << endl;
+    }
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    cout<<size;
+    printArr(arr, size-2);
+    return 0;
+}
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+void chinmaya(int arr[],int size){
+    int maxNum=arr[0];
+    int minNum=arr[0];
+    for(int i=0;i<size;i++){
+        if(arr[i]>maxNum){
+            maxNum=arr[i];
+            
+        }
+        if(arr[i]<minNum){
+            minNum=arr[i];
+        }
+    }
+    cout<<"Max-"<<maxNum<<endl<<"Min-"<<minNum<<endl;
+}
+
+int main() {
+
+int arr[10]={12,122,435,3,4,43,22,45,34,243,1};
+int size=sizeof(arr)/sizeof(arr[0]);
+chinmaya(arr,size);
+
+    return 0;
+}
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int search(int arr[],int size,int num){
+   bool sum=false;;
+    for(int i=0;i<size;i++){
+       if(arr[i]==num){
+           sum=true;
+       }
+    }
+if(sum){
+    cout<<"the vale is present"<<endl;
+}
+else{
+    cout<<"the value is absent";
+}
+
+    return 0;
+}
+
+int main() {
+
+int arr[10]={12,122,435,3,4,43,22,45,34,243};
+int size=sizeof(arr)/sizeof(arr[0]);
+search(arr,size,452);
+
+    return 0;
+}
